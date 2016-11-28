@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>This is from Jungle</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/create_survey.js"></script>
+    <script src="./js/edit_survey.js"></script>
+    <script src="./js/data_survey.js"></script>
+</head>
+
+<body>
+    <div class="g-head">
+        <div class="m-logo">
+            <span class="s-logo">祥庚的问卷调查生成插件</span>
+        </div>
+        <div class="m-nav">
+            <ul class="f-cb">
+                <li><a>以下正文</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="g-body">
+        <div class="m-survey-editor">
+            <ul class="m-edit-bar f-cb j-sur-bar">
+                <li class="u-edit-item">
+                    <a class="j-handle" sv-type="rodio">单选</a>
+                </li>
+                <li class="u-edit-item">
+                    <a class="j-handle" sv-type="checkedbox">多选</a>
+                </li>
+                <li class="u-edit-item">
+                    <a class="j-handle" sv-type="filled">填空</a>
+                </li>
+                <li class="u-edit-item">
+                    <a class="j-handle" sv-type="img">添加图片</a>
+                </li>
+                <li class="u-edit-item">
+                    <a class="j-handle" sv-type="info">个人信息</a>
+                </li>
+            </ul>
+            <div class="m-qus-zone j-zone">
+                <div class="m-preview">
+                    <div class="m-items" >
+                      <div class="m-tips u-input-tips">
+                        添加问卷说明
+                      </div>
+                    </div>
+                    <div class="m-items j-qus-items">
+                      <div class="m-title-qus f-cb">
+                          <div class="u-no f-fl">1.</div>
+                          <div class="u-qus f-fl">
+                            <span class="z-qus">请在此输入问题标题</span>
+                            <span class="s-red">&nbsp;*</span>
+                            <span class="z-type">&nbsp;[多选题]</span>
+                          </div>
+                      </div>
+                      <div class="m-table-qus">
+                          <ul class="u-content">
+                              <li>
+                                  <input class="u-input u-input-check" type="checkbox">
+                                  <span class="u-input-label">选项1</span>           
+                              </li>
+                              <li>
+                                  <input class="u-input u-input-check" type="checkbox">
+                                  <span class="u-input-label">选项2</span>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="m-handle f-cb">
+                          <div class="z-anchor f-fl">
+                            <p class="u-anchor-tips f-dn">在此题后插入新题</p>
+                          </div>
+                          <ul class="u-qus-btn-box f-fl f-cb">
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn j-edit-sw">编辑</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">删除</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">上移</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">下移</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">最前</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">最后</a>
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="m-items j-qus-items">
+                      <div class="m-title-qus f-cb">
+                          <div class="u-no f-fl">2.</div>
+                          <div class="u-qus f-fl">
+                            <span class="z-qus">请在此输入问题标题</span>
+                            <span class="s-red">&nbsp;*</span>
+                            <span class="z-type">&nbsp;[多选题]</span>
+                          </div>
+                      </div>
+                      <div class="m-table-qus">
+                          <ul class="u-content">
+                              <li>
+                                  <input class="u-input u-input-check" type="checkbox">
+                                  <span class="u-input-label">选项1</span>           
+                              </li>
+                              <li>
+                                  <input class="u-input u-input-check" type="checkbox">
+                                  <span class="u-input-label">选项2</span>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="m-handle f-cb">
+                          <div class="z-anchor f-fl">
+                            <p class="u-anchor-tips f-dn">在此题后插入新题</p>
+                          </div>
+                          <ul class="u-qus-btn-box f-fl f-cb">
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn j-edit-sw">编辑</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">删除</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">上移</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">下移</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">最前</a>
+                            </li>
+                            <li class="u-qus-btn-cell">
+                              <a href="javascript:void(0);" class="u-qus-btn">最后</a>
+                            </li>
+                          </ul>
+                      </div>
+                      <div class="m-detail j-detail f-hd">
+                        <div class="u-detail-title">
+                          <dl class="u-dl">
+                            <dt>标题</dt>
+                            <dd><input type="text"></dd>
+                            <dt>当前题型</dt>
+                            <dd>
+                              <span>多选题</span>
+                                <select name="" id="">
+                                  <option value="0">转换题型</option>
+                                </select>
+                            </dd>
+                            </dl>
+                            <dl class="u-dl">
+                            <dt>必答题</dt>
+                            <dd>
+                              <input type="checkbox">
+                            </dd>
+                            <dt>填写提示</dt>
+                            <dd>
+                              <input type="checkbox">
+                              <input type="text">
+                            </dd>
+                          </dl>
+                        </div>
+                        <!-- <table class="u-table">
+                          <thead>
+                            <tr>
+                              <th><span class="u-tb"></span></th>
+                              <th><span class="u-tb"></span></th>
+                              <th><span class="u-tb"></span></th>
+                              <th><span class="u-tb"></span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="text"></td>
+                              <td>
+                                <span>多选题</span>
+                                <select name="" id="">
+                                  <option value="0">转换题型</option>
+                                </select>
+                              </td>
+                              <td><input type="checkbox"></td>
+                              <td>
+                                <input type="checkbox">
+                                <input type="text">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table> -->
+                        <table  class="u-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="u-tb">选项文字</span><i class="u-icon-up-down">_\_</i>
+                              </th>
+                              <th><span class="u-tb">允许填空</span></th>
+                              <th><span class="u-tb">默认</span></th>
+                              <th><span class="u-tb">操作</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <input type="text">
+                              </td>
+                              <td>
+                                <input type="checkbox">
+                              </td> 
+                              <td>
+                                <input type="checkbox">
+                              </td>
+                              <td>
+                                <i class="u-tb">+</i><i class="u-tb">-</i><i class="u-tb">up</i><i class="u-tb">down</i>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="m-option-handle f-cb">
+                          <div class="u-items main f-fl">
+                              <span class="u-tb">添加选项</span>
+                          </div>
+                          <ul class="f-cb f-fl u-items">
+                            <li class="item">
+                              <span class="u-tb">至少选</span>
+                              <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                              </select>
+                              <span class="u-tb">项</span>
+                            </li>
+                            <li class="item">
+                              <span>至多选</span>
+                              <select name="" id="">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                              </select>
+                              <span>项</span>
+                            </li>
+                            <li class="item">
+                              <span>排列方式</span>
+                              <select name="" id="">
+                                <option value="1">竖向排列</option>
+                                <option value="2">每行2列</option>
+                                <option value="3">每行3列</option>
+                              </select>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="m-complete-btn">
+                          <span class="u-com-btn j-edit-sw">完成编辑</span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="g-foot"></div>
+</body>
+
+</html>
