@@ -228,6 +228,7 @@ input:-moz-placeholder {
   padding-left: 20px;
   line-height: 18px;
   text-decoration: underline;
+  cursor: pointer;
 }
 .u-table {
   width: 100%;
@@ -297,22 +298,12 @@ input:-moz-placeholder {
 .g-head {
   width: 1200px;
   margin: 0 auto;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 .g-body {
   width: 1200px;
   margin: 0 auto;
   background-color: #efefef;
   overflow: auto;
-  position: absolute;
-  bottom: 0;
-  top: 112px;
-  left: 0;
-  right: 0;
 }
 .m-logo {
   padding: 20px;

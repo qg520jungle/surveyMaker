@@ -1,3 +1,8 @@
+
+$(function(){
+	$('.j-editor').survey();
+	
+})
 $(function(){
   $('body').on('click','.j-edit-sw',function(){
     if($(this).hasClass('z-act')){
