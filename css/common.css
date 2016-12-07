@@ -96,6 +96,9 @@ input:-moz-placeholder {
 .u-label {
   cursor: pointer;
 }
+.u-input-large {
+  width: 400px;
+}
 /* 箭头 */
 .u-popover .arrow,
 .u-popover .arrow:after {
@@ -174,6 +177,12 @@ input:-moz-placeholder {
 .u-input {
   display: inline-block;
 }
+.u-input-detail {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #666;
+  padding: 2px 2px;
+}
 .u-input-check {
   height: 16px;
   width: 16px;
@@ -233,13 +242,25 @@ input:-moz-placeholder {
 .u-table {
   width: 100%;
 }
+.u-table thead tr {
+  background: #e1e0e0;
+  overflow: hidden;
+}
+.u-table .u-table-left {
+  text-align: left;
+  padding-left: 10px;
+}
 .u-table thead tr th,
 .u-table tbody tr td {
   font-size: 16px;
   text-align: center;
+  border: none;
+  height: 24px;
+  line-height: 24px;
 }
 .u-tb {
   font-size: 16px;
+  display: inline-block;
 }
 .u-com-btn {
   display: inline-block;
@@ -262,6 +283,9 @@ input:-moz-placeholder {
 .u-dl dt,
 .u-dl dd {
   display: inline-block;
+}
+.u-dl dt.normal {
+  width: 68px;
 }
 .f-cb:after,
 .f-cbli li:after {
@@ -365,7 +389,38 @@ input:-moz-placeholder {
   margin-bottom: 10px;
 }
 .m-complete-btn {
-  margin: 15px 10px;
+  margin: 10px 10px;
+}
+.m-detail {
+  background: #fff;
+  padding: 5px 20px;
+  margin: 5px 10px;
+}
+.m-detail-title .u-dl {
+  height: 24px;
+  line-height: 24px;
+}
+.m-detail-title .u-dl .t {
+  text-align: right;
+}
+.m-detail-title .u-dl .c {
+  margin-left: 5px;
+}
+.m-detail-title .u-input-detail {
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+}
+.m-detail-title .u-input-large {
+  width: 400px;
+}
+.m-option-box {
+  margin-top: 10px;
+}
+.m-option-handle {
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .m-option-handle .u-items {
   font-size: 0;

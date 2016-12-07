@@ -6,7 +6,9 @@
 .u-label{
   cursor:pointer;
 }
-
+.u-input-large{
+    width: 400px;
+}
 /* 箭头 */
 .u-popover {
     .arrow, .arrow:after {
@@ -94,6 +96,12 @@
 .u-input{
 	display: inline-block;
 }
+.u-input-detail{
+    border:none;
+    background: none;
+    border-bottom: 1px solid #666;
+    padding: 2px 2px;
+}
 .u-input-check{
     height: 16px;
     width: 16px;
@@ -154,13 +162,28 @@
 }
 .u-table{
     width: 100%;
+    thead tr{
+        background: #e1e0e0;
+        overflow: hidden;
+    }
+    .u-table-left{
+        text-align: left;
+        padding-left: 10px;
+    }
 }
 .u-table thead tr th,.u-table tbody tr td{
     font-size: @size;
     text-align: center;
+    border:none;
+    height: 24px;
+    line-height: 24px;
 }
 .u-tb{
     font-size: @size;
+    display: inline-block;
+}
+.u-icon-op-handle{
+
 }
 .u-com-btn{
     display: inline-block;
@@ -181,5 +204,8 @@
     font-size: @size;
     dt,dd{
         display: inline-block;
+    }
+    dt.normal{
+        width: 68px;
     }
 }

@@ -1,5 +1,6 @@
 /*用于生成html 标签专用js*/
 //下划线的方法 加载html DOM 驼峰方法 绑定方法
+//下面修改 题号  换行时需要修改题号，删除时需要修改题号
 (function ($) {
 	 $.fn.survey = function (method) {
 	      // Method calling and initialization logic
@@ -14,6 +15,7 @@
 		title: "请输入题目",
 		rowNum: 0,
 		type: "radio",
+		count: 0,
 		//头部数组，理应由外部传入
 	       headerarr: [
 			{
@@ -101,6 +103,7 @@
 			var type = $(this).attr('sv-type');
 			//console.log(settings)
 			settings.rowNum++;
+			settings.count++;
 			var obj={
 				type:type,
 				rows: settings.rowNum,
@@ -212,9 +215,99 @@
 			$(this).parent().find('.z-hide').css('visibility','visible').removeClass('z-hide')
 			$(this).remove();
 			isMove = false;
-			//在此更新序号变化
+			//在此更新序号变化 order num
+			updataOrderNum(settings);
 		})
 
+	}
+	//按键绑定事件 item生成后绑定 注意绑定所有的按键
+	function btnBindingEvent(){
+		$('body').off('click').on('click','.survey-tool-del',function(){
+			//获得 当前的sv-id
+			var svid = getSvidByjQEle($(this))
+			//console.log(svid)
+			console.log(settings)
+			delObjBySvid(svid)
+			console.log(settings)
+			var $this = getItemByjQEle($(this))
+			$this.remove();
+			//在此更新序号变化 order num
+			updataOrderNum(settings);
+		})
+		$('body').off('click').on('click','.survey-tool-up',function(){
+		//在此向上一个
+		})
+		$('body').off('click').on('click','.survey-tool-dn',function(){
+		//在此向下一个
+		})
+		$('body').off('click').on('click','.survey-tool-top',function(){
+		//在此最上
+		})
+		$('body').off('click').on('click','.survey-tool-bom',function(){
+		//在此最下
+		})
+	}
+	//传入参数 settings 不对其进行改变
+	function updataOrderNum(settings){
+		$('.survey-no').each(function(index,el){
+			var svid = getSvidByjQEle($(el));
+			var thisObj = getObjBySvid(svid);
+			$(el).html(thisObj.rows +'.')
+		})
+	}
+	//通过当前的 $元素 获取 sv-id 
+	function getSvidByjQEle($el){
+		var svid = ''
+		//console.log($el.parents('.survey-items'))
+		if($el.hasClass('.survey-items')){
+			svid = $el.attr('sv-id')
+		}else if($el.parents('.survey-items').length == 1){
+			svid = $el.parents('.survey-items').attr('sv-id')
+		}else{
+			console.log('获取svid的方法错误')
+		}
+		return svid
+	}
+	//通过当前的 $元素 获取 本item $元素
+	function getItemByjQEle($el){
+		var $item = ''
+		if($el.hasClass('.survey-items')){
+			$item = $el
+		}else if($el.parents('.survey-items').length ==1){
+			$item = $el.parents('.survey-items')
+		}else{
+			console.log('获取$item的方法错误')
+		}
+		return $item
+	}
+	//删除指定sv-id的settings中的obj
+	function delObjBySvid(_id){
+		var index = -1
+		var re = false
+		for(var i=0;i<settings.data.length;i++){
+			if(settings.data[i].id == _id){
+				index = i
+			}
+		}
+		if(index >= 0){
+			delTheOthers(index,settings.data[index].rows)
+			settings.data.splice(index,1)
+			
+			re = true
+		}else{
+			console.log('删除settings中的obj方法错误，无此id的元素')
+			re = false
+		}
+		return re
+	}
+	//删除后对settings的操作，包括， 修改rowsNum 修改所有超过此rows的选项
+	function delTheOthers(index,rows){
+		settings.rowNum --
+		for(var i=0;i<settings.data.length;i++){
+			if(settings.data[i].rows > rows){
+				settings.data[i].rows --;
+			}
+		}
 	}
 	//通过当前元素sv-id获得对应元素obj
 	function getObjBySvid(_id){
@@ -325,6 +418,7 @@
 				break;
 		}
 		itemBindingEvent();
+		btnBindingEvent();
 		return obj
 	}
 	//添加问题区域
@@ -359,7 +453,7 @@
 	//生成题干 需要行号 类型 适用于所有类型
 	function new_title(obj){
 		var _title = $('<div />').addClass('m-title-qus f-cb')
-				var _no = $('<div />').addClass('u-no f-fl').html(obj.rows+'.')
+				var _no = $('<div />').addClass('u-no survey-no f-fl').html(obj.rows+'.')
 				var _qus = $('<div />').addClass('u-qus f-fl')
 					var _z_qus = $('<span />').addClass('z-qus').html('请在此输入问题标题')
 					var _x = $('<span />').addClass('s-red').html('&nbsp;*')

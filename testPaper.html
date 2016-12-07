@@ -142,90 +142,83 @@
                             </li>
                           </ul>
                       </div>
-                      <div class="m-detail j-detail f-hd">
-                        <div class="u-detail-title">
+                      <div class="m-detail j-detail ">
+                        <div class="m-detail-title">
                           <dl class="u-dl">
-                            <dt>标题</dt>
-                            <dd><input type="text"></dd>
-                            <dt>当前题型</dt>
-                            <dd>
-                              <span>多选题</span>
-                                <select name="" id="">
-                                  <option value="0">转换题型</option>
-                                </select>
+                            <dt class="t normal">标题</dt>
+                            <dd class="c">
+                              <input class="u-input u-input-detail u-input-large" type="text">
                             </dd>
-                            </dl>
-                            <dl class="u-dl">
-                            <dt>必答题</dt>
-                            <dd>
-                              <input type="checkbox">
+                          </dl>
+                          <dl class="u-dl">
+                            <dt class="t normal">必答题</dt>
+                            <dd class="c">
+                              <input class="u-input" type="checkbox">
                             </dd>
-                            <dt>填写提示</dt>
-                            <dd>
-                              <input type="checkbox">
-                              <input type="text">
+                          </dl>
+                          <dl class="u-dl">
+                            <dt class="t normal">补充说明</dt>
+                            <dd class="c">
+                              <input class="u-input" type="checkbox">
+                              <input class="u-input u-input-detail u-input-large" type="text">
                             </dd>
                           </dl>
                         </div>
-                        <!-- <table class="u-table">
-                          <thead>
-                            <tr>
-                              <th><span class="u-tb"></span></th>
-                              <th><span class="u-tb"></span></th>
-                              <th><span class="u-tb"></span></th>
-                              <th><span class="u-tb"></span></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><input type="text"></td>
-                              <td>
-                                <span>多选题</span>
-                                <select name="" id="">
-                                  <option value="0">转换题型</option>
-                                </select>
-                              </td>
-                              <td><input type="checkbox"></td>
-                              <td>
-                                <input type="checkbox">
-                                <input type="text">
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table> -->
-                        <table  class="u-table">
-                          <thead>
-                            <tr>
-                              <th>
-                                <span class="u-tb">选项文字</span><i class="u-icon-up-down">_\_</i>
-                              </th>
-                              <th><span class="u-tb">允许填空</span></th>
-                              <th><span class="u-tb">默认</span></th>
-                              <th><span class="u-tb">操作</span></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <input type="text">
-                              </td>
-                              <td>
-                                <input type="checkbox">
-                              </td> 
-                              <td>
-                                <input type="checkbox">
-                              </td>
-                              <td>
-                                <i class="u-tb">+</i><i class="u-tb">-</i><i class="u-tb">up</i><i class="u-tb">down</i>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div class="m-option-box">
+                          <table  class="u-table" cellspacing="0" cellpadding="0">
+                            <thead>
+                              <tr>
+                                <th class="u-table-left">
+                                  <span class="u-tb">选项文字</span><i class="u-icon-up-down">\</i>
+                                </th>
+                                <th><span class="u-tb">允许填空</span></th>
+                                <th><span class="u-tb">默认</span></th>
+                                <th><span class="u-tb">操作</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="u-table-left">
+                                  <input type="text" class="u-input u-input-detail u-input-large">
+                                </td>
+                                <td>
+                                  <input type="checkbox">
+                                </td> 
+                                <td>
+                                  <input type="checkbox">
+                                </td>
+                                <td>
+                                  <i class="u-tb u-icon-op-handle">+</i>
+                                  <i class="u-tb u-icon-op-handle">-</i>
+                                  <i class="u-tb u-icon-op-handle">up</i>
+                                  <i class="u-tb u-icon-op-handle">down</i>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="u-table-left">
+                                  <input type="text" class="u-input u-input-detail u-input-large">
+                                </td>
+                                <td>
+                                  <input type="checkbox">
+                                </td> 
+                                <td>
+                                  <input type="checkbox">
+                                </td>
+                                <td>
+                                  <i class="u-tb u-icon-op-handle">+</i>
+                                  <i class="u-tb u-icon-op-handle">-</i>
+                                  <i class="u-tb u-icon-op-handle">up</i>
+                                  <i class="u-tb u-icon-op-handle">down</i>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                         <div class="m-option-handle f-cb">
                           <div class="u-items main f-fl">
                               <span class="u-tb">添加选项</span>
                           </div>
-                          <ul class="f-cb f-fl u-items">
+                          <ul class="f-cb f-fr u-items">
                             <li class="item">
                               <span class="u-tb">至少选</span>
                               <select name="" id="">
@@ -233,16 +226,16 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                               </select>
-                              <span class="u-tb">项</span>
+                              <span class="u-tb">项;&nbsp;</span>
                             </li>
                             <li class="item">
-                              <span>至多选</span>
+                              <span class="u-tb">至多选</span>
                               <select name="" id="">
                                 <option value=""></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                               </select>
-                              <span>项</span>
+                              <span class="u-tb">项;&nbsp;</span>
                             </li>
                             <li class="item">
                               <span>排列方式</span>
